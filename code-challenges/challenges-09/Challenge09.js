@@ -43,14 +43,14 @@ const arrInc = (arr) => {
 //  [5, 6, 7, 7]
 // 
 const roundDecimals = (arr) => {
-    let num = arr ;
-let result = [];
-for (let index = 0; index < num.length; index++) {      
-  result[index] = Math.round(num[index]);
-    
-}
- console.log(result);
-    // write your code here
+    let result = [];
+    function rounddec (roun) {
+        roun.forEach(element => {
+            result.push(Math.round(element));
+        });
+    }
+    rounddec(arr);
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -117,24 +117,46 @@ for (let index = 0; index < num.length; index++) {
 //     }
 // ]
 //
+// let data = [
+//     {
+//         name: "Robert",
+//         section: "Transport",
+//         workHours: 8,
+//         salary: "3000$"
+//     },
+//     {
+//         name: "Richard",
+//         section: "HR",
+//         workHours: 6,
+//         salary: "4000$"
+//     },
+//     {
+//         name: "Christopher",
+//         section: "Production",
+//         workHours: 10,
+//         salary: "4500$"
+//     },
+//     {
+//         name: "Andrew",
+//         section: "HouseKeeping",
+//         workHours: 9,
+//         salary: "3200$"
+//     }
+// ]
+
 const employeesBonus = (arr) => {
-    // write your code here
-    let data = arr ;
-    for (let index = 0; index < data.length; index++) {
-        let x = data[index].salary;
-        let v = parseInt(x);
-        if( data[index].workHours >= 8 ){
-        
-        data[index].salary = v + 100;
-        }else {
-        data[index].salary =v +50;
-        }
+    let result =[];
+    if( arr.workHours > 8 ) {
+           arr.salary = arr.salary+100;
+           result.push(arr) 
+        //   return result;
+    }else if( arr.workHours <= 8 ) {
+           arr.salary = arr.salary+50;
+          result.push(arr) 
+          }return result;
+            };
 
-        }
-       
-    console.log(arr);
-}
-
+        // employeesBonus(data);
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
