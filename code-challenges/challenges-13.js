@@ -38,12 +38,19 @@
 //
 // Output: 5
 
-const objectCounter = (obj) => {
-    const count = obj.reduce((counter) => {
-    counter += 1;
-        return counter;
-}
-// objectCounter(voters);
+
+const objectCounter = (obj) => obj.reduce((Conter, currentValue) => Conter += 1, 0)
+    // write your code here
+
+
+
+// const objectCounter = (obj) => {
+//     const count = obj.reduce((counter) => {
+//     counter += 1;
+//         return counter;
+// }
+// // objectCounter(voters);
+// >>>>>>> main
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -61,10 +68,17 @@ const objectCounter = (obj) => {
 //
 // ------------------------
 
-const stringReverse = (str) => {
-    return str.split('').reduce((reversed, words) => words + reversed,"" )
-}
-// -------------------------------------------------------------------------------------------------------
+// <<<<<<< exercise13
+const stringReverse = str => str.split(" ").reduce((a, b) => [b].concat(a), []).join(" ")
+    // write your code here
+
+
+// =======
+// const stringReverse = (str) => {
+//     return str.split('').reduce((reversed, words) => words + reversed,"" )
+// }
+// >>>>>>> main
+// // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 03:
@@ -105,9 +119,16 @@ const stringReverse = (str) => {
 // };
 //
 
-const statistics = (obj) => {
+// <<<<<<< exercise13
+const statistics = (obj) => { return obj.reduce(function(r, a) { r[a.votes_To] = (r[a.votes_To] || 0) + 1; return r; }, {}); }
+
     // write your code here
-}
+
+=======
+// const statistics = (obj) => {
+//     // write your code here
+// }
+// >>>>>>> main
 // -------------------------------------------------------------------------------------------------------
 
 
