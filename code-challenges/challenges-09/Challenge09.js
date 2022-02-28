@@ -44,13 +44,13 @@ const arrInc = (arr) => {
 // 
 const roundDecimals = (arr) => {
     let result = [];
-    function rounddec (roun) {
-        roun.forEach(element => {
-            result.push(Math.round(element));
-        });
-    }
-    rounddec(arr);
+
+    for (let i = 0; i < arr.length; i++) {
+      result.push (Math.round(arr[i]) );
+     }  
     return result;
+    // write your code here
+
 }
 // -------------------------------------------------------------------------------------------------------
 
