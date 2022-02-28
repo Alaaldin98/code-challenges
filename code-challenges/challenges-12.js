@@ -71,9 +71,8 @@ const oddFiltration = (arr) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvsFiltration = (arr) => {
-  if (arr.yearsOfExperience > 4 && arr.tech == "JS")
-return arr.firstName + arr.LastName + arr.yearsOfExperience; 
-  
+    return arr.filter(val => val.yearsOfExperience > 4 && val.tech === "JS").map(val2 =>
+        ({ fullName: `${val2.firstName}${val2.LastName ? ` ${val2.LastName}` : ""}`, tech: val2.tech }));
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -88,8 +87,7 @@ return arr.firstName + arr.LastName + arr.yearsOfExperience;
 // 
 
 const vowelsFiltration = (arr) => {
-    const match = arr.match(/[aeiou]/gi);
-    return match ? match.length :0;
+    return arr.filter(words => !(words.match(/[aeiou]/g)?.length))
     };
     
 //     function checkIfAllVowelsArePresent(arr)
