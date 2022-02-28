@@ -34,37 +34,33 @@ function square(arr) {
 // note: the full names should be combined between student's first and last names.
 //
 // Input:
-[
-    {
-        firstName: 'Adam',
-        lastName: 'Anderson',
-    },
-    {
-        firstName: 'Ben',
-        lastName: 'Zeller',
-    }, 
-    {
-        firstName: 'Peter',
-        lastName: 'Mccord',
-    },
-    {
-        firstName: 'Fred',
-        lastName: 'Sagar',
-    },
-    {
-        firstName: 'Nathan',
-        lastName: 'Weiss',
-    }
-];
+// [
+//     {
+//         firstName: 'Adam',
+//         lastName: 'Anderson',
+//     },
+//     {
+//         firstName: 'Ben',
+//         lastName: 'Zeller',
+//     }, 
+//     {
+//         firstName: 'Peter',
+//         lastName: 'Mccord',
+//     },
+//     {
+//         firstName: 'Fred',
+//         lastName: 'Sagar',
+//     },
+//     {
+//         firstName: 'Nathan',
+//         lastName: 'Weiss',
+//     }
+// ];
 //
 // Output: ['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
 
 function fullName(arr) {
-let fullsnames = students;
-    fullName.map(students => `${students.firstName} ${authors.lastName}`);
-  console.log(fullsnames);fullsnames = students
-  fullName.map(students => `${students.firstName} ${students.lastName}`);
-console.log(fullsnames);
+    return (arr.map(Key => Key.firstName + " " + Key.lastName));
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -130,8 +126,13 @@ console.log(fullsnames);
 // -------------
 
 function gradesAvg(arr) {
-    return gradList.arr.reduce((a, b) => (a + b)) / arr.length;
-};
+    arr.map((element) => {
+        let sum = 0;
+        let len = element.gradsList.length;
+        element.gradsList.forEach(element => { sum += element });
+        element.avg = sum / len;
+    })
+    return arr;};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
