@@ -21,7 +21,13 @@
 //  2- The first letters of the firstName and lastName should be capital letter
 
 const objLat = (obj) => {
-    return "my name is " + this.obj.firstName +" " + this.obj.lastName + " " +"I am " + this.obj.age + " YO, and I love" +this.obj.hobby;
+// <<<<<<< exercise07
+    const newfirstName = obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
+    const newlastName = obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
+    return (`my name is ${newfirstName + " " + newlastName} I am ${obj.age} YO, and I love ${obj.hobby}.`)
+// =======
+//     return "my name is " + this.obj.firstName +" " + this.obj.lastName + " " +"I am " + this.obj.age + " YO, and I love" +this.obj.hobby;
+// >>>>>>> main
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -85,9 +91,44 @@ const objLat = (obj) => {
 //  2- If one of the names is null dont add it to the full name
 
 const cvFormatter = (arr) => {
-    if (this.cvs.yearsOfExperience > 1 && this.cvs.lastName == null) {
-        return this.cvs.firstName + this.cvs.tech ;
-     } else  return this.cvs.firstName + " " + this.cvs.lastName + this.cvs.tech ;
+// <<<<<<< exercise07
+    var newArr =[];
+    for(let i=0; i<arr.length; i++){
+
+        if(arr[i].yearsOfExperience > 1){
+
+            if(arr[i].lastName == null){
+
+                let newCV={
+                    fullName : arr[i].firstName,
+                    tech : arr[i].tech,
+                }
+                  newArr.push(newCV);
+            }
+
+            else if(arr[i].firstName==null){
+                let newCV={
+                    fullName : arr[i].lastName,
+                    tech : arr[i].tech,
+                }
+                  newArr.push(newCV);
+            }
+
+            else{
+                let newCV={
+                    fullName : (arr[i].firstName + " " + arr[i].lastName),
+                    tech : arr[i].tech,
+                }
+                  newArr.push(newCV);
+            }
+        }
+    }
+    return newArr;
+// =======
+//     if (this.cvs.yearsOfExperience > 1 && this.cvs.lastName == null) {
+//         return this.cvs.firstName + this.cvs.tech ;
+//      } else  return this.cvs.firstName + " " + this.cvs.lastName + this.cvs.tech ;
+// >>>>>>> main
 };
 // -------------------------------------------------------------------------------------------------------
 
