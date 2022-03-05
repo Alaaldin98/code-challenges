@@ -39,11 +39,13 @@
 // Output: 5
 
 const objectCounter = (obj) => {
-    const count = obj.reduce((counter) => {
-    counter += 1;
-        return counter;
+    let arr = []
+    let count = obj.reduce((current) =>
+        arr.push(obj[current])
+        , 0);
+    return arr.length
+
 }
-// objectCounter(voters);
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -61,9 +63,16 @@ const objectCounter = (obj) => {
 //
 // ------------------------
 
-const stringReverse = (str) => {
-    return str.split('').reduce((reversed, words) => words + reversed,"" )
-}
+
+    const stringReverse = (str) => {
+        let arr = []
+        arr = str.split(" ")
+        const reverseString = arr.reduce((acc, cur) =>
+            `${cur} ${acc}`);
+        return reverseString
+    }
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -105,10 +114,10 @@ const stringReverse = (str) => {
 // };
 //
 
-// const statistics = (obj) => {
-//     // write your code here
-// }
-// // -------------------------------------------------------------------------------------------------------
+const statistics = (obj) => {
+    // write your code here
+}
+// -------------------------------------------------------------------------------------------------------
 
 
-// module.exports = { objectCounter, stringReverse, statistics };
+module.exports = { objectCounter, stringReverse, statistics };
