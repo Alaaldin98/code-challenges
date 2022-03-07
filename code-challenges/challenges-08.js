@@ -18,51 +18,24 @@
 
 // Input:
 // {
-   
+//     "Romio Joliat": 35,
+//     "Mario Ristrova": 39,
+//     "Sofia firnando": 50,
 // }
 //
 // Output:
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
-// const customerAndAge = (name , age) => {
-  // "Romio Joliat": 35,
-  // "Mario Ristrova": 39,
-  // "Sofia firnando": 50,
-//   // write your code here
-// };
 const customerAndAge = (obj) => {
-  let array=[];
-  for(let i in obj){
-    
-    array.push(`Customer Name :${i} , Age :${obj[i]}`);
-  }
-  return array;
+  // write your code here
+  let arr =[];
+    for(const p in obj){
+       arr.push(`Customer Name :${p} , Age :${obj[p]}`);
+    }
+    return arr;
+  
 };
-// char** myFunction() {
-//   char ** sub_str = malloc(10 * sizeof(char*));
-//   for (int i =0 ; i < 10; ++i)
-//       sub_str[i] = malloc(20 * sizeof(char));
-//   /* Fill the sub_str strings */
-//   return sub_str;
-// }
-
-
-// var person1 = {
-//   namep: "Romio Joliat",
-//   age: 35,
-//   };
-
-//   var person2 = {
-//   namep: "Mario Ristrova",
-//   age: 39,
-//   };
-//   var person3 = {
-//     namep: "Sofia firnando",
-//     age: 50,
-//     };
-//     console.log(" Name: " + person1(namep) + ", Age : " +person1(age) +" Name: " + person2(namep) + ", Age : " +person2(age) +" Name: " + person3(namep) + ", Age : " +person3(age)  );
-
-// ------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02
@@ -86,13 +59,12 @@ const customerAndAge = (obj) => {
 // You can solve this challenge by using Object.entries
 
 const getEntries = (obj) => {
-
-  let array=[]
-  for (const [index, value] of Object.entries(obj)) {
-    array.push(`${index}: ${value}`);
-  }
-
- return array;
+  // write your code here
+  let arr = [];
+    for(const p in obj){
+        arr.push(`${p}: ${obj[p]}`);
+    }
+    return arr;
 };
 // -------------------------------------------------------------------------------------------------------
 
