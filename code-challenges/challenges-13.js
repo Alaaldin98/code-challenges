@@ -39,12 +39,10 @@
 // Output: 5
 
 const objectCounter = (obj) => {
-    let arr = []
-    let count = obj.reduce((current) =>
-        arr.push(obj[current])
-        , 0);
-    return arr.length
-
+    const result = obj.reduce((accumulator) => {
+        return accumulator+=1;
+    }, 0);
+return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
