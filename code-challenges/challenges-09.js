@@ -44,11 +44,13 @@ const arrInc = (arr) => {
 // 
 const roundDecimals = (arr) => {
     let result = [];
+
     for (let i = 0; i < arr.length; i++) {
       result.push (Math.round(arr[i]) );
      }  
     return result;
     // write your code here
+
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -115,6 +117,33 @@ const roundDecimals = (arr) => {
 //     }
 // ]
 //
+// let data = [
+//     {
+//         name: "Robert",
+//         section: "Transport",
+//         workHours: 8,
+//         salary: "3000$"
+//     },
+//     {
+//         name: "Richard",
+//         section: "HR",
+//         workHours: 6,
+//         salary: "4000$"
+//     },
+//     {
+//         name: "Christopher",
+//         section: "Production",
+//         workHours: 10,
+//         salary: "4500$"
+//     },
+//     {
+//         name: "Andrew",
+//         section: "HouseKeeping",
+//         workHours: 9,
+//         salary: "3200$"
+//     }
+// ]
+
 const employeesBonus = (arr) => {
     let array = [];
     arr.forEach((ele) => {

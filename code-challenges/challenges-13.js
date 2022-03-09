@@ -105,10 +105,10 @@ const stringReverse = (str) => {
 // };
 //
 
-const statistics = (obj) => {
-    // write your code here
-}
-// -------------------------------------------------------------------------------------------------------
+// const statistics = (obj) => {
+//     // write your code here
+// }
+// // -------------------------------------------------------------------------------------------------------
 
 
-module.exports = { objectCounter, stringReverse, statistics };
+// module.exports = { objectCounter, stringReverse, statistics };

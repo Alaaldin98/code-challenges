@@ -30,15 +30,14 @@
   // "Sofia firnando": 50,
 //   // write your code here
 // };
-function format (CustomerName,Age){
-  this.CustomerName = CustomerName;
-  this.Age = Age;
-console.log("Customer Name: " +format.CustomerName + ", Age : " +format.Age );
+const customerAndAge = (obj) => {
+  let array=[];
+  for(let i in obj){
+    
+    array.push(`Customer Name :${i} , Age :${obj[i]}`);
+  }
+  return array;
 };
-format("Romio Joliat", 35);
-format("Mario Ristrova", 39);
-format("Sofia firnando", 50);
-
 // char** myFunction() {
 //   char ** sub_str = malloc(10 * sizeof(char*));
 //   for (int i =0 ; i < 10; ++i)
@@ -86,14 +85,15 @@ format("Sofia firnando", 50);
 // Note:
 // You can solve this challenge by using Object.entries
 
-function recipe (name,ingredients,cookTime,price){
-  this.name = name;
-  this.ingredients = ingredients;
-  this.cookTime = cookTime;
-  this.price = price;
-console.log("name: " +recipe.name + ", ingredients: " +recipe.ingredients ["bread", "tomato", "chicken", "mayo"] + " cookTime: " + recipe.cookTime +" price: " + recipe.price);
+const getEntries = (obj) => {
+
+  let array=[]
+  for (const [index, value] of Object.entries(obj)) {
+    array.push(`${index}: ${value}`);
+  }
+
+ return array;
 };
-recipe();
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------

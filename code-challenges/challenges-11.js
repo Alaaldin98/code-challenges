@@ -34,28 +34,28 @@ function square(arr) {
 // note: the full names should be combined between student's first and last names.
 //
 // Input:
-[
-    {
-        firstName: 'Adam',
-        lastName: 'Anderson',
-    },
-    {
-        firstName: 'Ben',
-        lastName: 'Zeller',
-    }, 
-    {
-        firstName: 'Peter',
-        lastName: 'Mccord',
-    },
-    {
-        firstName: 'Fred',
-        lastName: 'Sagar',
-    },
-    {
-        firstName: 'Nathan',
-        lastName: 'Weiss',
-    }
-];
+// [
+//     {
+//         firstName: 'Adam',
+//         lastName: 'Anderson',
+//     },
+//     {
+//         firstName: 'Ben',
+//         lastName: 'Zeller',
+//     }, 
+//     {
+//         firstName: 'Peter',
+//         lastName: 'Mccord',
+//     },
+//     {
+//         firstName: 'Fred',
+//         lastName: 'Sagar',
+//     },
+//     {
+//         firstName: 'Nathan',
+//         lastName: 'Weiss',
+//     }
+// ];
 //
 // Output: ['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
 
